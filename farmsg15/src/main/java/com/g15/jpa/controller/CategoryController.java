@@ -23,8 +23,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/Category")
 @CrossOrigin(origins = "*")
 public class CategoryController {
+
     @Autowired
     private CategoryService categoryService;
+    
     @GetMapping("/all")
     public List<Category> getCategory(){
         return categoryService.getCategory();
@@ -50,8 +52,8 @@ public class CategoryController {
     
     //Metodo para actualizar (Capa de controlador)
     @PutMapping("/update")
-    public ResponseEntity updateCategory(@RequestBody Category category){
-       categoryService.updateCategory(category);
+    public ResponseEntity updateCategoria(@RequestBody Category categoria){
+        categoryService.updateCategory(categoria);
        return ResponseEntity.status(201).build(); 
     }
     

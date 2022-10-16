@@ -43,8 +43,8 @@ public class CategoryService {
             if (!opcional.isEmpty()){
                 Category categoryDB = opcional.get();
 
-                if (category.getDescription()!=null)categoryDB.setDescription(category.getDescription());
-                if (category.getName()!=null)categoryDB.setName(category.getName());
+                categoryDB.setDescription(category.getDescription());
+                categoryDB.setName(category.getName());
                 
                 return categoryRepository.save(categoryDB);
             }else{
