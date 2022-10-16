@@ -52,7 +52,7 @@ public class CategoryController {
     
     //Metodo para actualizar (Capa de controlador)
     @PutMapping("/update")
-    public ResponseEntity updateCategoria(@RequestBody Category categoria){
+    public ResponseEntity updateCategory(@RequestBody Category categoria){
         categoryService.updateCategory(categoria);
        return ResponseEntity.status(201).build(); 
     }
